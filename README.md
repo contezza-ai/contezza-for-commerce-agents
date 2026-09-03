@@ -10,9 +10,9 @@ with citations, evidence validation, and audit trails built in.
 
 ### Shopping agents increasingly rely on merchant websites for product, pricing, and policy information — through model training, information retrieval, and real-time shopping data.
 
-That makes a brand's website a critical source of truth for AI but the merchant information itself may be **contradictory, outdated, or incomplete.**.
+That makes a brand's website a critical source of truth for AI, but the merchant information itself may be **contradictory, outdated, or incomplete.**
 
-When a shopping agent gets a product, pricing or policy fact wrong — a restocking fee, warranty term, shipping cost, or product price — the problem isn't always hallucination.
+When a shopping agent gets a product, pricing, or policy fact wrong — a restocking fee, warranty term, shipping cost, or product price — the problem isn't always hallucination.
 
 Often, the agent is doing exactly what it was designed to do: finding a real piece of merchant information and faithfully repeating it.
 
@@ -20,7 +20,7 @@ Two common failure modes:
 
 **1. Your own pages can contradict each other.**
 
-In our audits of DTC brands, a majority published different numbers for the same product or policy fact — a restocking fee, warranty terms, shipping costs or product price. 
+In our audits of DTC brands, a majority published different numbers for the same product or policy fact. 
 One brand's FAQ states a 20% restocking fee; its returns page states 15%. Both are live. An agent answers with whichever source it retrieves.
 
 **2. Your published information becomes stale.**
