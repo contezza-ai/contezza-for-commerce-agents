@@ -5,7 +5,6 @@
 A governed merchant data source for Anthropic's [commerce-agents](https://github.com/anthropics/commerce-agents) blueprint —
 with citations, evidence validation, and audit trails built in.
 
-from [contezza.ai](https://contezza.ai).
 
 ## Why
 
@@ -17,11 +16,11 @@ When a shopping agent gets a money-related fact wrong — a restocking fee, warr
 
 Often, the agent is doing exactly what it was designed to do: finding a real piece of merchant information and faithfully repeating it.
 
-The problem is that the merchant's own information may be **contradictory, **outdated, or incomplete.**.
+The problem is that the merchant's own information may be **contradictory, outdated, or incomplete.**
 
 Two things break:
 
-**1. Brands own pages can contradict each other.**
+**1. Your own pages can contradict each other.**
 
 In our audits of DTC brands, a majority published different numbers for the same money fact — fees, warranty terms, shipping costs. 
 One brand's FAQ states a 20% restocking fee; its returns page states 15%. Both are live. An agent answers with whichever source it retrieves.
@@ -39,10 +38,10 @@ The result is an AI answer that can be factually grounded in the brand's own web
 
 The problem isn't only whether AI can find the right information. It's whether the information itself is ready to be trusted by AI.
 
-Contezza AI fixes the problem by being a trusted merchant knowledge for AI agents.
+Contezza AI fixes the problem by being a trusted merchant knowledge source for AI agents.
 
-This adapter is the plug-in: a drop-in `StorefrontBackend` that serves the verified feed
-to the same agent.
+This adapter is the plug-in: a drop-in `StorefrontBackend` that serves Contezza's
+verified merchant knowledge feed to the blueprint agent.
 
 ## Use
 
