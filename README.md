@@ -8,7 +8,7 @@ with citations, evidence validation, and audit trails built in.
 
 ## Why
 
-### Shopping agents increasingly rely on merchant websites for model training, information retrieval, and real-time shopping data.
+### Shopping agents increasingly rely on merchant websites for product, pricing and policy information — through model training, information retrieval, and real-time shopping data.
 
 That makes a brand's website a critical source of truth for AI. But most brands don't know whether the information they publish is consistent, current, and reliable enough for AI to use.
 
@@ -38,10 +38,7 @@ The result is an AI answer that can be factually grounded in the brand's own web
 
 The problem isn't only whether AI can find the right information. It's whether the information itself is ready to be trusted by AI.
 
-Contezza AI fixes the problem by being a trusted merchant knowledge source for AI agents.
-
-This adapter is the plug-in: a drop-in `StorefrontBackend` that serves Contezza's
-verified merchant knowledge feed to the blueprint agent.
+Contezza AI makes merchant knowledge trustworthy for AI agents. Contezza adapter plugin continuously evaluates merchant content, identifies contradictions and stale information, and produces a verified merchant knowledge feed that AI agents can rely on.
 
 ## Use
 
