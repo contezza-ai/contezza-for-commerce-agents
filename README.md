@@ -36,7 +36,7 @@ The result is an AI answer that can be factually **grounded in the brand's own w
 
 The problem isn't only whether AI can find the right information. It's whether the information itself is ready to be trusted by AI.
 
-Contezza AI makes merchant knowledge trustworthy for AI agents. The Contezza adapter continuously evaluates merchant content, identifies contradictions and stale information, and delivers a verified knowledge feed to agents.
+Contezza AI makes merchant knowledge trustworthy for AI agents. Contezza continuously evaluates merchant content, identifies contradictions and stale information, and maintains a verified knowledge feed for each brand. This adapter performs one specific function: it serves that feed to agents built on the commerce-agents blueprint, as a drop-in `StorefrontBackend`.
 
 ## Use
 
