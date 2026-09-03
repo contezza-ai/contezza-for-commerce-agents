@@ -1,0 +1,66 @@
+# FICTIONAL demonstration feed — "Acme Outdoors" is not a real brand. The entries mirror
+# real failure patterns measured in Contezza audits (contradicting fee surfaces, warranty
+# fine print, price ladders) with invented values. Live feeds are brand-approved.
+brand: "Acme Outdoors"
+tenant: acme-outdoors
+catalog:
+  - product_id: summit-tent-4p
+    title: "Summit Tent (4-person)"
+    price: 499.0
+    description: "Acme's flagship four-person tent. $499–$649 by fabric option."
+    specs: {fabric: "ripstop canvas", included: "poles, stakes, carry bag", price_range: "$499–$649 by fabric"}
+  - product_id: trail-pack-45
+    title: "Trail Pack 45L"
+    price: 189.0
+    description: "45L internal-frame backpacking pack."
+entries:
+  - id: policy.returns.window
+    topics: [returns]
+    intents: ["How long do I have to return?", "return window"]
+    status: verified
+    answer:
+      text: "You have 30 days from delivery to initiate a return. Items must be unused and in original packaging, and a return authorization is required before shipping anything back."
+      facts: {window_days: 30, authorization_required: true}
+    citations:
+      - url: "https://example.com/acme/returns"
+        anchor: "within 30 days of delivery"
+    lifecycle: {version: 1, approved_by: brand-admin, review_by: "2027-01-01"}
+
+  - id: policy.returns.fee
+    topics: [returns]
+    intents: ["What is the restocking fee?", "return fee"]
+    status: needs_reconciliation
+    answer:
+      text: "Acme's published surfaces currently state two different restocking fees for change-of-mind returns: the FAQ says 15%, and the returns policy page says 10%. Until the brand reconciles these, a shopper may be quoted either number depending on which page is read."
+      facts: {fee_faq: "15%", fee_returns_page: "10%"}
+    citations:
+      - url: "https://example.com/acme/faq"
+        anchor: "15% restocking fee"
+      - url: "https://example.com/acme/returns"
+        anchor: "10% restocking fee"
+    lifecycle: {version: 1, approved_by: PENDING-BRAND, review_by: "2026-12-01"}
+
+  - id: policy.warranty.term
+    topics: [warranty]
+    intents: ["Is there a lifetime warranty?", "how long is the warranty"]
+    status: verified
+    answer:
+      text: "Acme covers manufacturing defects for the lifetime of the product for the original owner. Normal wear, weather damage, and misuse are excluded; the optional Shield plan (sold separately) covers accidental damage."
+      facts: {term: "lifetime (manufacturing defects)", accidental_addon: "Shield (paid)"}
+    citations:
+      - url: "https://example.com/acme/warranty"
+        anchor: "lifetime of the product"
+    lifecycle: {version: 1, approved_by: brand-admin, review_by: "2027-01-01"}
+
+  - id: product.summit.price
+    topics: [pricing]
+    product: "Summit Tent"
+    intents: ["How much is the Summit Tent?", "Summit Tent price"]
+    status: verified
+    answer:
+      text: "The Summit Tent (4-person) runs $499–$649 depending on fabric: $499 in standard ripstop, $649 in the fire-retardant option. The Trail Pack 45L is $189."
+      facts: {price_summit: "$499-649", price_trail_pack: "$189"}
+    citations:
+      - url: "https://example.com/acme/catalog"
+        anchor: "499"
+    lifecycle: {version: 1, approved_by: brand-admin, review_by: "2026-12-01"}
