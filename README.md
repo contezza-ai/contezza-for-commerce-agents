@@ -62,7 +62,11 @@ own systems for those, or disable them in `ShoppingAgentConfig`.
   anchor disappears flags STALE upstream before it can mislead a shopper.
 
 `examples/acme-outdoors.yaml` is a fictional demonstration feed. Live brand feeds are
-brand-approved and served per tenant — feed URLs (api.contezza.ai) and MCP endpoints
-(mcp.contezza.ai) carry the same contract.
+brand-approved and served per tenant — feed URLs (api.contezza.ai) and the MCP surface
+(`mcp.contezza.ai/ecommerce/mcp` — "Contezza AI for Merchants") carry the same contract.
+
+Working in Claude Code? The
+[contezza-for-merchants plugin](https://github.com/contezza-ai/contezza-plugins) bundles
+a feed-authoring skill, a quickstart skill for this adapter, and that MCP surface.
 
 [contezza.ai](https://contezza.ai) · hello@contezza.ai · Apache-2.0
